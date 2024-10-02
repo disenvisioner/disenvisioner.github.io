@@ -2,123 +2,148 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information 28.14 2.72-->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="description"
+        content="DisEnvisioner: Disentangled and Enriched Visual Prompt for Customized Image Generation">
+  <meta name="keywords" content="Visual Disentanglement and Enrichment, Zero-shot Customization, Text-to-Image Generation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
   <title>DisEnvisioner</title>
-  <link rel="icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEqklEQVR4nO2ZbWwURRjHt4adudaSiBCVRowlKgRQ+UAwadTu7h3tB443qYmiRk3EED+I+IEPFI0JmigxNsaEFoltopAYDS2hvIQU2JnrG2AF4gtGg8YobUE5KhaOHnB9zMwdZG92Dnenu4cmneTJZCdP9vn/5plndm5O08bbeBtvgTSguBISkWeBoEagqBco/gkoOgsEjwLBF4Hgc0Dw90DRXiC4AYi+ArpKK26uaFu7DQhamxWGwbcRDncYKF4FtlZePOF7NAwE1QPB55WESw2dhQRaA32aHq74hP4QUPyDF1EHdi2CJS0UZjed4f3BXXEvWfkautCMcMRTtAQITnkVX7lp2GX72pd5ycgQ2JFHgxa/HCi+4nVJLG5OSAGWtlCvy2oIbH1OMOLtCfO8zvw1m9M0KAVg4z7q4nfo1CaNTXyfVpbdEv0VZQAZgGxNoI/GBkDx2+JLj3RMgzXtBtS1LeI9exZ9WMHKAOzdhQs5cywK6f7PIX1qq3P8KhB0v5r4jomTgeC/RfHxtqUu6+24RwrBZnx202neFxI/2j0V0v1fQCqV4nb1+ELR5y01AILWicFe22lKAV5vN/wtjWvie6fDpXPfXBfPbPTwTNfWqgiAfxQDPrkjLgVg474BEuUw8mdnnnhmmeO1IsB5/+ITaJYsaJAZuHJipUs8s8u/bBQBLqrM/iuyoIVq4Kv9d/sGGPnDlgKMJI+I2+kp/wAUfVIoMINgM163I857FfHMLg0PSAFSF5LiVnpIBSChIsofQL8UgI0LS6jBPwBBv4UNkB7YLgVID7SKvrUKGcBDYQNkjtVIAdi4Y/2fBNBuUcgAvhw2AFAMzc3NLsvzSaA63+JzAGlp0M06wFMlAJaW7T/WQwRAnyqJzwEkpeIf09zWqIcBsAdsLaIOQPG3roBsxmUAT5coA9QsMMCyrOtWu8Bg22YjfKchZfG5DLS5AsYk4pmxcUWAZfHH8wFqDP/HBjkAqi9GBp5ZXpUHYFnWyWAAbGy4ArKClQFsUa+Bl1c8kgdgmubRYAD6NF1ayAyCzXg0N/NjEA/scPjiPDEDJBCAfzsPBWXrVs0VM7AzQIAJ89XFoR6wcQx6tFJ+g2dHngOKTot+76x+UATYGhgAhyCoW0H8Qdk2CHbZXfymweHbsHaWuIQ2BQyATd8AnfrDBd9H8UtO383rHxAz8G6gALmgrZ7FE5y84bs68XSn/2cb7hMzUB88QFdphefTqU+A7Rsr8wAMw3g1cAAemKDF/DrcC4Stzy34HhuvdPru/XCamIEXQgHgwSla7y0LiEiLmJZNZb9vnb60sUKsgSdCA8iKwO97hDgEFNfwq8ke7XagkeeBoDOiX1/LnXkA0Wg0FioAhyBoNRCcCeJDdmLbZHEJzQ8dgENQtFA2o37t5y8nDToBqqurZxYFgEN033oHELSFX8CqABA00PrevdVOgFgsVvw//vgtHkFNQPEFj1stW37bwC6fUlVVNVHIQPH+7HOBsHMPX1r4A6CoAyj6FSj+K7v9okF+LCF4g3BdXmKaZia3A2XYs/Z/a6ZpJnMAN/wI/mebZVlvWpY1bJrmGzdby3jTfLZ/AJOF2RIt3WUGAAAAAElFTkSuQmCC">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FWSVCGZTG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-1FWSVCGZTG');
+  </script>
+
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
+        rel="stylesheet">
 
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="./css/bulma.min.css">
+  <link rel="stylesheet" href="./css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./css/twentytwenty.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="icon" type="image/x-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEqklEQVR4nO2ZbWwURRjHt4adudaSiBCVRowlKgRQ+UAwadTu7h3tB443qYmiRk3EED+I+IEPFI0JmigxNsaEFoltopAYDS2hvIQU2JnrG2AF4gtGg8YobUE5KhaOHnB9zMwdZG92Dnenu4cmneTJZCdP9vn/5plndm5O08bbeBtvgTSguBISkWeBoEagqBco/gkoOgsEjwLBF4Hgc0Dw90DRXiC4AYi+ArpKK26uaFu7DQhamxWGwbcRDncYKF4FtlZePOF7NAwE1QPB55WESw2dhQRaA32aHq74hP4QUPyDF1EHdi2CJS0UZjed4f3BXXEvWfkautCMcMRTtAQITnkVX7lp2GX72pd5ycgQ2JFHgxa/HCi+4nVJLG5OSAGWtlCvy2oIbH1OMOLtCfO8zvw1m9M0KAVg4z7q4nfo1CaNTXyfVpbdEv0VZQAZgGxNoI/GBkDx2+JLj3RMgzXtBtS1LeI9exZ9WMHKAOzdhQs5cywK6f7PIX1qq3P8KhB0v5r4jomTgeC/RfHxtqUu6+24RwrBZnx202neFxI/2j0V0v1fQCqV4nb1+ELR5y01AILWicFe22lKAV5vN/wtjWvie6fDpXPfXBfPbPTwTNfWqgiAfxQDPrkjLgVg474BEuUw8mdnnnhmmeO1IsB5/+ITaJYsaJAZuHJipUs8s8u/bBQBLqrM/iuyoIVq4Kv9d/sGGPnDlgKMJI+I2+kp/wAUfVIoMINgM163I857FfHMLg0PSAFSF5LiVnpIBSChIsofQL8UgI0LS6jBPwBBv4UNkB7YLgVID7SKvrUKGcBDYQNkjtVIAdi4Y/2fBNBuUcgAvhw2AFAMzc3NLsvzSaA63+JzAGlp0M06wFMlAJaW7T/WQwRAnyqJzwEkpeIf09zWqIcBsAdsLaIOQPG3roBsxmUAT5coA9QsMMCyrOtWu8Bg22YjfKchZfG5DLS5AsYk4pmxcUWAZfHH8wFqDP/HBjkAqi9GBp5ZXpUHYFnWyWAAbGy4ArKClQFsUa+Bl1c8kgdgmubRYAD6NF1ayAyCzXg0N/NjEA/scPjiPDEDJBCAfzsPBWXrVs0VM7AzQIAJ89XFoR6wcQx6tFJ+g2dHngOKTot+76x+UATYGhgAhyCoW0H8Qdk2CHbZXfymweHbsHaWuIQ2BQyATd8AnfrDBd9H8UtO383rHxAz8G6gALmgrZ7FE5y84bs68XSn/2cb7hMzUB88QFdphefTqU+A7Rsr8wAMw3g1cAAemKDF/DrcC4Stzy34HhuvdPru/XCamIEXQgHgwSla7y0LiEiLmJZNZb9vnb60sUKsgSdCA8iKwO97hDgEFNfwq8ke7XagkeeBoDOiX1/LnXkA0Wg0FioAhyBoNRCcCeJDdmLbZHEJzQ8dgENQtFA2o37t5y8nDToBqqurZxYFgEN033oHELSFX8CqABA00PrevdVOgFgsVvw//vgtHkFNQPEFj1stW37bwC6fUlVVNVHIQPH+7HOBsHMPX1r4A6CoAyj6FSj+K7v9okF+LCF4g3BdXmKaZia3A2XYs/Z/a6ZpJnMAN/wI/mebZVlvWpY1bJrmGzdby3jTfLZ/AJOF2RIt3WUGAAAAAElFTkSuQmCC">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
+  <script src="./js/jquery-3.2.1.min.js"></script>
+  <script src="./js/jquery.event.move.js"></script>
+  <script src="./js/jquery.twentytwenty.js"></script>
+  <script src="./js/bulma-carousel.min.js"></script>
+  <script src="./js/bulma-slider.min.js"></script>
+  <script src="./js/fontawesome.all.min.js"></script>
+
+  <!--MathJax-->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      },
+      svg: {
+        fontCache: 'global'
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">
-                <a style="color:#8601AF;">Dis</a><a style="color:#ee55ee;">En</a><a style="color:#55eeee;">visioner</a>:
+                <a style="color:#8601AF;">Dis</a><a style="color:#ee55ee;">En</a><a style="color:#55cccc;">visioner</a>:<br>
                 <a style="color:#8601AF;">Dis</a>entangled and
                 <a style="color:#ee55ee;">En</a>riched
-                <a style="color:#55eeee;">Visual</a>
+                <a style="color:#55cccc;">Visual</a>
                 Prompt for Customized Image Generation</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                Anonymous
-                <!-- <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Anonymous</a><sup>*</sup>,</span> -->
-                <!-- <span class="author-block"> -->
-                  <!-- <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span> -->
-                  <!-- <span class="author-block"> -->
-                    <!-- <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a> -->
-                  </span>
-                  </div>
+          <h3 class="title has-text-centered">arXiv 2024</h3>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=RsLS11MAAAAJ" target="_blank" rel="noopener noreferrer">
+                Jing He<sup>1<span style="color:red;">&#10033;</span></sup>
+            </a>,
+            </span>
+            <span class="author-block">
+              <a href="https://haodong-li.com/" target="_blank" rel="noopener noreferrer">
+                Haodong Li<sup>1<span style="color:red;">&#10033;</span></sup>
+            </a>,
+            </span>
+            <span class="author-block">
+              <a href="" target="_blank" rel="noopener noreferrer">
+                Yongzhe Hu<sup></sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=d8VVM4UAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
+                Guibao Shen<sup>1</sup></a>,
+            </span>
+            <span class="author-block">
+              <a href="https://yjcaimeow.github.io/" target="_blank" rel="noopener noreferrer">
+                Yingjie Cai<sup>3</sup></a>,
+            </span>
+            <span class="author-block">
+                <a href="https://weichaoqiu.com/" target="_blank" rel="noopener noreferrer">
+                Weichao Qiu<sup>3</sup></a>,
+              </span>
+            <span class="author-block">
+              <a href="https://www.yingcong.me/" target="_blank" rel="noopener noreferrer">
+                Ying-Cong Chen<sup>1,2&#9993;</sup></a>
+            </span>
+          </div>
 
-                  <div class="is-size-5 publication-authors">
-                    <!-- <span class="author-block">Institution Name<br>Conferance name and year</span> -->
-                    <span class="author-block">Under-review</span>
-                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
-                  </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>HKUST(GZ)</span>
+            <span class="author-block"><sup>2</sup>HKUST</span>
+            <span class="author-block"><sup>3</sup>Noah's Ark Lab</span>
+            <br>
+            <span class="author-block">
+                <sup style="color:red;">&#10033;</sup><strong>Both authors contributed equally.</strong>
+                <sup>&#9993;</sup>Corresponding author.
+            </span>
+          </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- Arxiv PDF link -->
-                      <span class="link-block">
-                        <a href="static/pdfs/disenvisioner.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper (39.7MB)</span>
-                      </a>
-                    </span>
-
-                    <span class="link-block">
-                        <a href="static/pdfs/disenvisioner_compressed.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper (3.7MB)</span>
-                      </a>
-                    </span>
-
-                  <!-- Github link -->
-                  <span class="link-block">
-                    <!-- <a href="https://github.com/YOUR REPO HERE" target="_blank" -->
-                    <a href="" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code (coming soon)</span>
-                  </a>
-                </span>
-
-                <!-- ArXiv abstract Link -->
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank" rel="noopener noreferrer"
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    <i class="ai ai-arxiv" style="font-size:23px"></i>
                   </span>
-                  <span>arXiv</span> -->
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/EnVision-Research/DisEnvisioner" target="_blank" rel="noopener noreferrer"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github" style="font-size:23px"></i>
+                  </span>
+                  <span>
+                    Code (coming soon)
+                  </span>
+                </a>
+              </span>
+              <!-- Hugging Face Space (LCM). -->
+              <span class="link-block">
+                <a href="https://huggingface.co/spaces/xxx/DisEnvisioner" target="_blank" rel="noopener noreferrer"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon" style="font-size:23px">
+                      &#129303;
+                  </span>
+                  <span>Huggingface Demo (coming soon)</span>
                 </a>
               </span>
             </div>
@@ -129,170 +154,149 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
-    <div class="column is-full">
-        <img src="static\images\teaser_resized.jpg" alt="MY ALT TEXT"/>
-    </div>
     <div class="hero-body">
-      <h2 class="subtitle has-text-justified">
-        <b>Customization examples of DisEnvisioner.</b>
-        Without cumbersome tuning or relying on multiple reference images,
-        our DisEnvisioner is capable of generating a variety of exceptional customized images.
-        Characterized by its emphasis on the interpretation of <b>subject-essential attributes</b>,
-        DisEnvisioner effectively discerns and enhances the subject-essential feature while filtering out irrelevant attributes,
-        achieving superior personalizing quality with reduced inference time.
+      <img id="teaser" width="100%" src="./images/teaser.jpg" alt="Teaser 1"/>
+      <h2 class="subtitle">
+        We present <span class="methodname" style="font-weight: bold;">DisEnvisioner</span>, without cumbersome tuning or relying on multiple reference images, <span class="methodname" style="font-weight: bold;">DisEnvisioner</span> is capable of generating a variety of exceptional customized images. Characterized by its emphasis on the interpretation of subject-essential attributes, <span class="methodname" style="font-weight: bold;">DisEnvisioner</span> effectively discerns and enhances the subject-essential feature while filtering out irrelevant attributes, achieving superior personalizing quality in both editability and ID consistency.
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
 
-<!-- Paper abstract -->
+
 <section class="section hero is-light">
   <div class="container is-max-desktop">
+    <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-full">
+      <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            In the realm of image generation, creating imagery of customized subject from visual prompt with additional textual instruction emerges as a promising endeavor, attracting the forefront of innovation and interest.
-            However, existing methods, both tuning-based and tuning-free, struggle with interpreting the subject-essential attributes from the visual prompt.
-            This leads to subject-irrelevant attributes infiltrating the generation process, ultimately compromising the personalization quality in both editability and ID preservation.
-            In this paper, we present <b>DisEnvisioner</b>, a novel approach for extracting subject-essential features, enabling exceptional customization performance, in a <b>tuning-free</b> manner and using only <b>a single image</b>.
-            Specifically, the feature of the subject and other irrelevant components are effectively separated via aggregating image features into distinctive visual tokens, enabling a much more precise interpretation.
-            Aiming to advanced customization performance, we further enrich the disentangled elements, which are sculpted into a much more granular representation.
-            Experiments demonstrate the superiority of our approach over existing methods not only in instruction response but also the ID consistency.
-            These highlight the effectiveness and efficiency of DisEnvisioner, paving the way for practical image customization applications.
-          </p>
+        <p>
+        In the realm of image generation, creating customized images from visual prompt with additional textual instruction emerges as a promising endeavor. However, existing methods, both tuning-based and tuning-free, struggle with interpreting the subject-essential attributes from the visual prompt. This leads to subject-irrelevant attributes infiltrating the generation process, ultimately compromising the personalization quality in both editability and ID preservation.
+        </p><p>
+        In this paper, we present <span class="methodname" style="font-weight: bold;">DisEnvisioner</span>, a novel approach for effectively extracting and enriching the subject-essential features while filtering out -irrelevant information, enabling exceptional customization performance, in a <strong>tuning-free</strong> manner and using only <strong>a single image</strong>. Specifically, the feature of the subject and other irrelevant components are effectively separated into distinctive visual tokens, enabling a much more accurate customization. Aiming to further improving the ID consistency, we enrich the disentangled features, sculpting them into more granular representations.
+        </p><p>
+        Experiments demonstrate the superiority of our approach over existing methods in instruction response (editability), ID consistency, inference speed, and the overall image quality, highlighting the effectiveness and efficiency of DisEnvisioner.
+        </p>
         </div>
       </div>
     </div>
+    <!--/ Abstract. -->
   </div>
 </section>
-<!-- End paper abstract -->
 
-<section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-full">
-            <h2 class="title is-3">Motivation</h2>
-            <div class="content has-text-justified">
-              <img src="static\images\figure_motivation_resized.jpg" alt="MY ALT TEXT"/>
-              <p>
-                Results of customized generation across different methods within a single-image setting,
-                where each method conducts multiple images of the same subject taken under different conditions parallel testing.
-                By comparing the generation results across multiple reference images of the same subject captured under varied conditions, 
-                We observe that <b>extraneous factors</b> affect customization quality in both editability and identity consistency.
-                For instance, <b>exact posture replication</b> leads to scene distortions, and <b>background impedes</b> the transition to novel "space" scene. 
-              </p>
-            </div>
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+
+        <h2 class="title is-3">Motivation</h2>
+        <div class="content has-text-justified">
+        <img id="method_train" width="100%" src="./images/motivation.jpg" alt="motivation"/>
+
+        <p>
+        XXX
+        </p>        
         </div>
-      </div>
-    </div>
-</section>
 
-<section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-full">
-            <h2 class="title is-3">Method Overview and Detailed Architecture</h2>
-            <div class="content has-text-justified">
-              <img src="static\images\overview_resized.jpg" alt="MY ALT TEXT"/>
-              <p>
-                <b>Overview of our proposed DisEnvisioner</b>, which consists of two key components: <i>i.e.</i>, DisVisioner and EnVisioner.
-                In the inference phase, subject-irrelevant features are discarded to minimize harmful disturbances.
-              </p>
-            </div>
-            <div class="content has-text-justified">
-                <img src="static\images\method.jpg" alt="MY ALT TEXT"/>
-                <script type="text/x-mathjax-config">
-                MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-                </script>
-                <script type="text/javascript"
-                src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-                </script>
-                <p>
-                    <b>Training pipeline of our proposed DisEnvisioner.</b>
-                    Our approach is structured into two stages:
-                    (a) DisVisioner firstly decomposes the feature of the subject and other irrelevant components by aggregating the image feature into two distinct and orthogonal tokens.
-                    (b) EnVisioner subsequently refines and sculpts the disentangled features into more granular representations to produce high ID-consistency images with the input image.
-                    Only colored modules (<a style="color:orange;">orange</a> and <a style="color:skyblue;">blue</a>) are trainable.
-                </p>
-              </div>
-        </div>
-      </div>
-    </div>
-</section>
-
-<section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-full">
-            <h2 class="title is-3">Visual Comparison to Other Methods</h2>
-            <div class="content has-text-justified">
-              <img src="static\images\QR_1_resized.jpg" alt="MY ALT TEXT"/>
-              <p>
-                <b>Qualitative comparison on live subjects.</b>
-                Comparing two live subjects across various scenarios, our method excels in quality, editability, and identity fidelity. Notably, it preserves the subject's posture unaffected by reference images, showcasing our strength in capturing essential features.
-              </p>
-              <img src="static\images\QR_2_resized.jpg" alt="MY ALT TEXT"/>
-              <img src="static\images\QR_3_resized.jpg" alt="MY ALT TEXT"/>
-              <p>
-                <b>Qualitative comparison on non-live subjects.</b>
-                Besides offering editability based on textual instructions, our method excels in preserving high-level identity, notably in customized objects like robots and boots. Furthermore, images generated by our method are minimally affected by irrelevant elements.
-              </p>
-            </div>
-        </div>
-      </div>
-    </div>
-</section>
-
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="content has-text-justified">
+            <center><img id="method_train" width="80%" src="./images/pipeline_overview.jpg" alt="motivation"/></center>
   
-<!-- Image carousel -->
-<!-- End image carousel -->
+        <p>
+        XXX
+        </p> 
+               
+        </div>
+
+        <h2 class="title is-3">Training Pipeline</h2>
+        <div class="content has-text-justified">
+            <img id="method_train" width="100%" src="./images/pipeline.png" alt="training scheme"/>
+  
+        <p>
+        XXX
+        </p> 
+               
+        </div>
+
+        <h2 class="title is-3">Experiments</h2>
+        <div class="content has-text-justified">
+        <h3 class="title has-text-centered">
+        main table
+        </h3>
+
+        <p>
+        Quantitative comparison XXX
+        </p>
+
+        <img id="comparison" width="100%" src="./images/tab1.png" alt="Comparison with other methods"/>
+
+        <h3 class="title has-text-centered">
+        user study
+        </h3>
+
+        <p>
+        User Study
+        </p>
+
+        <img id="comparison" width="100%" src="./images/tab2.png" alt="Comparison with other methods"/>
+
+        <h3 class="title has-text-centered">
+        Qualitative comparison
+        </h3>
+
+        <img id="comparison" width="100%" src="./images/QC1.jpg" alt="Comparison with other methods"/>
+
+        <p>
+            Qualitative comparison for Animal 
+        </p>
+        <img id="comparison" width="100%" src="./images/QC2.jpg" alt="Comparison with other methods"/>
+
+        <p>
+            Qualitative comparison for non-live objects 
+        </p>
+        <p class="mt-5">
+        Please refer to our paper linked above for more technical details :)
+        </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Method. -->
+  </div>
+</section>
 
 
-<!-- Youtube video -->
-<!-- End youtube video -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre class="selectable"><code>he2024disenvisioner
+</code></pre>
+  </div>
+</section>
 
-
-<!-- Video carousel -->
-<!-- End video carousel -->
-
-
-<!-- Paper poster -->
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
+<footer class="footer pt-4 pb-0">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            Website template based on
+            <a href="https://marigoldmonodepth.github.io/">
+            Marigold
+            </a>
+            and licensed under
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+            CC-BY-SA-4.0
+            </a>.
           </p>
-
         </div>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+</body>
+</html>
