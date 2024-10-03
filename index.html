@@ -136,16 +136,6 @@
                   </span>
                 </a>
               </span>
-              <!-- Hugging Face Space (LCM). -->
-              <span class="link-block">
-                <a href="https://huggingface.co/spaces/xxx/DisEnvisioner" target="_blank" rel="noopener noreferrer"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon" style="font-size:23px">
-                      &#129303;
-                  </span>
-                  <span>Huggingface Demo (coming soon)</span>
-                </a>
-              </span>
             </div>
           </div>
         </div>
@@ -178,7 +168,7 @@
         </p><p>
         In this paper, we present <span class="methodname" style="font-weight: bold;">DisEnvisioner</span>, a novel approach for effectively extracting and enriching the subject-essential features while filtering out -irrelevant information, enabling exceptional customization performance, in a <strong>tuning-free</strong> manner and using only <strong>a single image</strong>. Specifically, the feature of the subject and other irrelevant components are effectively separated into distinctive visual tokens, enabling a much more accurate customization. Aiming to further improving the ID consistency, we enrich the disentangled features, sculpting them into more granular representations.
         </p><p>
-        Experiments demonstrate the superiority of our approach over existing methods in instruction response (editability), ID consistency, inference speed, and the overall image quality, highlighting the effectiveness and efficiency of DisEnvisioner.
+        Experiments demonstrate the superiority of our approach over existing methods in instruction response (editability), ID consistency, inference speed, and the overall image quality, highlighting the effectiveness and efficiency of <span class="methodname" style="font-weight: bold;">DisEnvisioner</span>.
         </p>
         </div>
       </div>
@@ -198,7 +188,18 @@
         <img id="method_train" width="100%" src="./images/motivation.jpg" alt="motivation"/>
 
         <p>
-        XXX
+            We compare <span class="methodname" style="font-weight: bold;">DisEnvisioner</span> and popular existing methods under single-image setting.
+            It can be observed that irrelevant factors, such as the <span style="background-color: yellow;">subject's posture</span> (<span style="color: rgb(255, 200, 0);">&#9650;</span>) and 
+            <span style="background-color: rgb(255, 0, 255);">background</span> (<span style="color: rgb(255, 0, 255);">&#11044;</span>),
+            can affect the customization quality and result in
+            <span style="background-color: rgb(0, 200, 0);"><em>poor</em> editability</span> (<span style="color: rgb(0, 200, 0);">&#9724;</span>) or
+            <span style="background-color: rgb(0, 183, 255);"><em>poor</em> ID consistency</span> (<span style="color: rgb(0, 183, 255);">&#9670;</span>).
+            For instance, BLIP-Diffusion falls in both two factors, leading to poor editability and ID consistency. We denotes its performance as
+            <span style="color: rgb(255, 200, 0);">&#9650;</span><span style="color: rgb(255, 0, 255);">&#11044;</span><strong>&#8594;</strong><span style="color: green;">&#9724;</span><span style="color: rgb(0, 183, 255);">&#9670;</span>
+            (the symbols without color filling, such as <span style="color: rgb(255, 200, 0);">&#9651;</span>, indicates that the customization is <em>not</em> affected by subject's posture, and
+            <span style="color: rgb(0, 200, 0);">&#9723;</span> indicates <em>good</em> editability).
+            We also try to use masks to filter out irrelevant information for these methods. However, the harmful influence of subject's posture still exists.
+            And solid background colors (<em>e.g.</em>, white or black) also can harmfully impact the customization quality, leading to textureless backgrounds.
         </p>        
         </div>
 
@@ -207,7 +208,9 @@
             <center><img id="method_train" width="80%" src="./images/pipeline_overview.jpg" alt="motivation"/></center>
   
         <p>
-        XXX
+        <span class="methodname" style="font-weight: bold;">DisEnvisioner</span> mainly consists of two key components:
+        <span class="methodname" style="font-weight: bold;">DisVisioner</span> and <span class="methodname" style="font-weight: bold;">EnVisioner</span>.
+        During inference, subject-irrelevant features are discarded to avoid harmful disturbances.
         </p> 
                
         </div>
@@ -217,7 +220,13 @@
             <img id="method_train" width="100%" src="./images/pipeline.png" alt="training scheme"/>
   
         <p>
-        XXX
+        <span class="methodname" style="font-weight: bold;">DisEnvisioner</span> is structured into two stages:
+        </p><p>
+            (a) <span class="methodname" style="font-weight: bold;">DisVisioner</span> firstly disentangles the features of the subject and other irrelevant components by aggregating the image feature $\boldsymbol{\upsilon}_{\text{ref}}$ into two distinct and orthogonal tokens $\boldsymbol{v}_{\text{d}}$. 
+        </p><p>
+            (b) <span class="methodname" style="font-weight: bold;">EnVisioner</span> subsequently refines and sculpts the disentangled features $\mathcal V_{\text{d}}$ into more granular representations to produce high ID-consistency images with the input image $\mathbf{x}_{\text{ref}}$, and can improve the overall visual quality of the image.
+        </p><p>
+            Only colored modules (<span style="color: orange;">orange</span> and <span style="color: rgb(0, 183, 255);">blue</span>) are trainable. The whole (nearly) Diffusion model is fixed.
         </p> 
                
         </div>
@@ -225,38 +234,46 @@
         <h2 class="title is-3">Experiments</h2>
         <div class="content has-text-justified">
         <h3 class="title has-text-centered">
-        main table
+        Quantitative Comparisons
         </h3>
 
         <p>
-        Quantitative comparison XXX
+        The evaluation metrics include CLIP text alignment for assessing editability (C-T), CLIP and DINO image-alignment for ID-consistency (C-I, D-I),
+        internal variance to demonstrate the resistance to subject-irrelevant factors (IV), and inference time for efficiency (T).
+        </p><p>
+        <span class="methodname" style="font-weight: bold;">DisEnvisioner</span> demonstrates better comprehensive performance than other methods.
+        Top results are in <strong>bold</strong>; second-best are <u>underlined</u>.
+        $^\S$For equity, we consider C-I and D-I as two sub-indicators of image-alignment, the rank of each has a weight of $0.5$ in mRank calculation, while the ranks of all other metrics have a weight of $1.0$.
         </p>
 
         <img id="comparison" width="100%" src="./images/tab1.png" alt="Comparison with other methods"/>
 
         <h3 class="title has-text-centered">
-        user study
+        User Study
         </h3>
 
         <p>
-        User Study
+        Participants grade each method given the generation outputs across 3 images of the same subject in each round. There are 5 rounds in total.
+        The metrics are text alignment (TA), subject identity alignment (IA), internal variance of those 3 customized images (IV), and image quality (IQ). A total of 69 users participated.
         </p>
 
         <img id="comparison" width="100%" src="./images/tab2.png" alt="Comparison with other methods"/>
 
         <h3 class="title has-text-centered">
-        Qualitative comparison
+        Qualitative Comparisons
         </h3>
 
         <img id="comparison" width="100%" src="./images/QC1.jpg" alt="Comparison with other methods"/>
 
         <p>
-            Qualitative comparison for Animal 
+            <span class="methodname" style="font-weight: bold;">DisEnvisioner</span> excels in editability and ID-consistency.
+            Notably, the animal's posture and its surroundings do not affect customization, showcasing our strength in capturing subject-essential features
         </p>
         <img id="comparison" width="100%" src="./images/QC2.jpg" alt="Comparison with other methods"/>
 
         <p>
-            Qualitative comparison for non-live objects 
+            Besides offering better editability, <span class="methodname" style="font-weight: bold;">DisEnvisioner</span> also excels in preserving accurate subject identity.
+            Moreover, images generated by <span class="methodname" style="font-weight: bold;">DisEnvisioner</span> are minimally affected by subject-irrelevant elements of reference images like the surroundings.
         </p>
         <p class="mt-5">
         Please refer to our paper linked above for more technical details :)
